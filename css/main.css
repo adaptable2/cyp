@@ -1,0 +1,174 @@
+header {
+  background: #8d8e7c;
+  padding: 10px 0;
+}
+header a {
+  color: #676a57;
+  text-decoration: none;
+}
+header h2 {
+  margin: 0;
+  font-family: "Caudex", serif;
+}
+header .menu-button svg {
+  max-width: 52px;
+  max-height: 52px;
+}
+header .menu-button svg path {
+  fill: #676a57;
+}
+
+body {
+  font-family: "Montserrat", serif;
+  overflow-x: hidden;
+}
+
+.banner {
+  min-height: 90vh;
+  background: url(../img/brand/bannerPau.jpeg) no-repeat center center/cover;
+  position: relative;
+}
+.banner .container {
+  position: relative;
+  z-index: 1;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(103, 106, 87, 0.5);
+  z-index: 0;
+}
+.banner .reloj {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  color: white;
+}
+.banner .reloj > div {
+  min-width: 57px;
+}
+.banner .reloj p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 200;
+}
+.banner .reloj span {
+  font-family: "Caudex", serif;
+  font-size: 22px;
+}
+.banner h1 {
+  font-size: 115px;
+  max-width: 450px;
+  line-height: 100px;
+  margin: 30px auto 40px;
+  color: white;
+  font-family: "Caudex", serif;
+}
+
+.fecha {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 200px;
+  font-family: "Caudex", serif;
+  padding: 15px 40px;
+}
+.fecha p {
+  display: block;
+  margin: 0;
+  padding: 0 40px;
+  color: #676a57;
+}
+.fecha p:last-child {
+  border-left: solid 1px #676a57;
+}
+
+.nuestra-boda {
+  background: #d8c2d8;
+  color: #937292;
+  padding: 50px 0 150px;
+}
+.nuestra-boda p {
+  font-weight: 300;
+}
+.nuestra-boda p strong {
+  font-family: "Caudex", serif;
+  color: #937292;
+}
+.nuestra-boda svg {
+  margin: 0 auto;
+  max-width: 144px;
+}
+.nuestra-boda h2 {
+  line-height: 50px;
+  font-family: "Caudex", serif;
+}
+.nuestra-boda-img {
+  padding-bottom: 100px;
+  color: #676a57;
+}
+.nuestra-boda-img img {
+  max-width: 490px;
+  margin: -100px 0 0;
+}
+.nuestra-boda-img h3 {
+  padding: 50px 0 30px;
+  margin: 0;
+}
+
+.title-60 {
+  font-size: 60px;
+  font-family: "Caudex", serif;
+}
+
+.historia .text-historia {
+  max-width: 390px;
+  color: #676a57;
+}
+.historia .text-historia p {
+  font-size: 22px;
+  line-height: 28px;
+  font-family: "Caudex", serif;
+  padding-top: 40px;
+}
+.historia .img {
+  max-width: 586px;
+}
+
+.parrafo {
+  background: #8d8e7c;
+  position: relative;
+  padding: 100px 0;
+}
+.parrafo::after {
+  content: "";
+  display: block;
+  width: 100%;
+  right: -99%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #8d8e7c;
+}
+.parrafo img {
+  max-width: 390px;
+  display: block;
+  margin: 0 auto 100px;
+}
+.parrafo p {
+  display: block;
+  margin: 0 auto 42px;
+  max-width: 337px;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */
