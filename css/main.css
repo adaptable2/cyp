@@ -6,6 +6,10 @@ header a {
   color: #676a57;
   text-decoration: none;
 }
+header a:hover {
+  color: #676a57;
+  text-decoration: none;
+}
 header h2 {
   margin: 0;
   font-family: "Caudex", serif;
@@ -18,15 +22,35 @@ header .menu-button svg path {
   fill: #676a57;
 }
 
-body {
+body, html {
   font-family: "Montserrat", serif;
   overflow-x: hidden;
 }
 
+.container {
+  max-width: 1640px;
+}
+
+section {
+  background: white;
+}
+
 .banner {
   min-height: 90vh;
-  background: url(../img/brand/bannerPau.jpeg) no-repeat center center/cover;
   position: relative;
+  overflow: hidden;
+  background: none;
+}
+.banner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(../img/brand/bannerPau.jpeg) no-repeat center center/cover;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 .banner .container {
   position: relative;
@@ -117,9 +141,20 @@ body {
   padding-bottom: 100px;
   color: #676a57;
 }
+@media screen and (max-width: 768px) {
+  .nuestra-boda-img .container .row > div:first-child img {
+    margin-top: -100px;
+  }
+}
 .nuestra-boda-img img {
   max-width: 490px;
   margin: -100px 0 0;
+}
+@media screen and (max-width: 768px) {
+  .nuestra-boda-img img {
+    margin: 0px 0 0;
+    max-width: 90%;
+  }
 }
 .nuestra-boda-img h3 {
   padding: 50px 0 30px;
@@ -131,6 +166,30 @@ body {
   font-family: "Caudex", serif;
 }
 
+.historia .left-content {
+  background: #d8c2d8;
+  color: #937292;
+  position: relative;
+  padding: 100px 0;
+}
+.historia .left-content::before {
+  content: "";
+  display: block;
+  width: 100%;
+  left: -100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #d8c2d8;
+}
+.historia .left-content p {
+  margin: 0;
+}
+.historia .left-content .title {
+  font-family: "Caudex", serif;
+  font-size: 22px;
+  padding-bottom: 23px;
+}
 .historia .text-historia {
   max-width: 390px;
   color: #676a57;
@@ -160,6 +219,10 @@ body {
   top: 0;
   background: #8d8e7c;
 }
+.parrafo svg {
+  width: 100%;
+  max-width: 250px;
+}
 .parrafo img {
   max-width: 390px;
   display: block;
@@ -170,5 +233,87 @@ body {
   margin: 0 auto 42px;
   max-width: 337px;
   color: white;
+}
+
+.registro {
+  position: relative;
+  overflow: hidden;
+  color: #676a57;
+}
+.registro .text-registro {
+  position: relative;
+  padding: 200px 0;
+}
+.registro .img-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+}
+.registro p {
+  display: block;
+  max-width: 341px;
+}
+
+.info {
+  padding: 100px 0;
+  color: #676a57;
+}
+.info .colores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.info .colores .colors {
+  padding: 30px 0 0;
+}
+.info .colores .colors > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+.info .colores .colors .color1 {
+  background: #676a57;
+}
+.info .colores .colors .color2 {
+  background: #8d8e7c;
+}
+.info .colores .colors .color3 {
+  background: #937292;
+}
+.info .colores .colors .color4 {
+  background: #caa3ca;
+}
+.info .colores .colors .color5 {
+  background: #d8c2d8;
+}
+.info .colores .cotenido {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 40px 30px;
+  background: #d8c2d8;
+  color: #937292;
+}
+footer a {
+  color: #937292;
+  text-decoration: none;
+  padding-right: 30px;
+}
+footer a:hover {
+  color: #caa3ca;
+}
+footer p {
+  max-width: 250px;
+}
+footer p strong {
+  font-size: 22px;
+  font-family: "Caudex", serif;
 }
 /*# sourceMappingURL=main.css.map */
