@@ -45,12 +45,17 @@ section {
   content: "";
   width: 100%;
   height: 100%;
-  background: url(../img/brand/bannerPau.jpeg) no-repeat center center/cover;
+  background: url(../img/brand/bannerPau2.jpg) no-repeat center center/cover;
   display: block;
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .banner::before {
+    background: url(../img/brand/bannerPauM.png) no-repeat center center/cover;
+  }
 }
 .banner .container {
   position: relative;
@@ -145,9 +150,6 @@ section {
   color: #937292;
   padding: 50px 15px 150px;
 }
-.nuestra-boda p {
-  font-weight: 300;
-}
 .nuestra-boda p strong {
   font-family: "Caudex", serif;
   color: #937292;
@@ -223,6 +225,11 @@ section {
   padding: 0 15px;
   max-width: 390px;
   color: #676a57;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .historia .text-historia p {
   font-size: 22px;
@@ -294,7 +301,7 @@ section {
 }
 .registro .text-registro {
   position: relative;
-  padding: 200px 0;
+  padding: 130px 0;
 }
 @media screen and (max-width: 768px) {
   .registro .text-registro {
@@ -304,7 +311,7 @@ section {
 .registro .img-absolute {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -130px;
   width: 80%;
 }
 @media screen and (max-width: 768px) {
@@ -566,5 +573,18 @@ footer p strong {
 
 .content-line-time .item svg path, .content-line-time .item svg polygon, .content-line-time .item svg rect, .content-line-time .item svg circle {
   fill: #937292;
+}
+
+.btn.btn-primario {
+  font-family: "Caudex", serif;
+  padding: 15px 30px;
+  background: #676a57;
+  border-radius: 50px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+video {
+  aspect-ratio: 1/1;
 }
 /*# sourceMappingURL=main.css.map */
