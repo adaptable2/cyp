@@ -316,6 +316,7 @@ section {
 }
 @media screen and (max-width: 768px) {
   .registro .img-absolute {
+    left: 0px;
     position: relative;
     width: 100%;
   }
