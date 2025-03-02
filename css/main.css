@@ -149,6 +149,15 @@ section {
   background: #d8c2d8;
   color: #937292;
   padding: 50px 15px 150px;
+  padding: 50px 50px;
+}
+@media screen and (max-width: 768px) {
+  .nuestra-boda {
+    padding: 50px 15px;
+  }
+}
+.nuestra-boda p {
+  font-weight: 500;
 }
 .nuestra-boda p strong {
   font-family: "Caudex", serif;
@@ -223,7 +232,7 @@ section {
 }
 .historia .text-historia {
   padding: 0 15px;
-  max-width: 390px;
+  max-width: 500px;
   color: #676a57;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -557,10 +566,15 @@ footer p strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.preguntas .images svg:first-child path, .preguntas .images svg:first-child circle {
+  fill: #937292;
 }
 .preguntas .images svg {
+  margin: 0 30px;
   max-height: 200px;
 }
 .preguntas .images svg path, .preguntas .images svg circle {
@@ -587,5 +601,24 @@ footer p strong {
 
 video {
   aspect-ratio: 1/1;
+}
+
+audio {
+  position: fixed;
+  z-index: 1;
+  left: 15px;
+  bottom: 15px;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+audio:hover {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-panel {
+  background-color: #676a57;
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */

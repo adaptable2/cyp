@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       scrollTrigger: {
         trigger: seccion, // El trigger es la sección
         start: "top 80%", // La animación comienza cuando el top de la sección alcanza el 80% de la ventana
-        end: "bottom 20%", // La animación termina cuando el bottom de la sección alcanza el 20% de la ventana
+        end: "bottom 60%", // La animación termina cuando el bottom de la sección alcanza el 20% de la ventana
         scrub: true, // Permite que la animación se controle con el scroll
         markers: false, // Muestra marcadores visuales (opcional)
       },
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       scrollTrigger: {
         trigger: seccion, // El trigger es la sección
         start: "top 100%", // La animación comienza cuando el top de la sección alcanza el 80% de la ventana
-        end: "bottom 50%", // La animación termina cuando el bottom de la sección alcanza el 20% de la ventana
+        end: "bottom 70%", // La animación termina cuando el bottom de la sección alcanza el 20% de la ventana
         scrub: true, // Permite que la animación se controle con el scroll
         markers: false, // Muestra marcadores visuales (opcional)
       },
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       scrollTrigger: {
         trigger: seccion, // El trigger es la sección
         start: "top 100%", // La animación comienza cuando el top de la sección alcanza el 80% de la ventana
-        end: "bottom 20%", // La animación termina cuando el bottom de la sección alcanza el 20% de la ventana
+        end: "bottom 60%", // La animación termina cuando el bottom de la sección alcanza el 20% de la ventana
         scrub: true, // Permite que la animación se controle con el scroll
         markers: false, // Muestra marcadores visuales (opcional)
       },
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       scrollTrigger: {
         trigger: item,
         start: "top 100%", // La animación comienza cuando el top del elemento alcanza el 80% de la ventana
-        end: "top 20%", // La animación termina cuando el top del elemento alcanza el 20% de la ventana
+        end: "top 50%", // La animación termina cuando el top del elemento alcanza el 20% de la ventana
         markers: false, // Puedes cambiar a true para ver los marcadores
         toggleActions: "play none none reverse", // Acciones al entrar y salir del trigger
         scrub: true,
@@ -108,5 +108,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       delay: index * 0.2, // Retraso para que aparezcan uno tras otro
     });
   });
-
+  let audio = document.getElementById("cancion");
+  audio.volume = 0.2;
 });
