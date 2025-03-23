@@ -425,8 +425,8 @@ footer p strong {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   position: relative;
   max-width: 780px;
   overflow: hidden;
@@ -444,13 +444,13 @@ footer p strong {
   background: white;
 }
 .content-line-time .item {
-  width: 100%;
-  max-width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  width: 100%;
+  max-width: 85px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -471,7 +471,6 @@ footer p strong {
   transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
-  margin-right: 20px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -487,6 +486,7 @@ footer p strong {
 }
 .content-line-time .item p {
   width: 100%;
+  font-size: 12px;
 }
 .content-line-time .item::before {
   content: "";
@@ -508,6 +508,8 @@ footer p strong {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .content-line-time::before {
     width: 4px;
@@ -532,9 +534,12 @@ footer p strong {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-right: 20px;
   }
   .content-line-time .item p {
     width: initial;
+    font-size: 16px;
+    max-width: 100px;
   }
   .content-line-time .item::before {
     content: "";
