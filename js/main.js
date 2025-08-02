@@ -1,47 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  function iniciarCuentaRegresiva(fechaObjetivo) {
-    const diasElemento = document.querySelector('.dias span');
-    const horasElemento = document.querySelector('.horas span');
-    const minutosElemento = document.querySelector('.minutos span');
-    const segundosElemento = document.querySelector('.segundos span');
-  
-    function actualizarCuentaRegresiva() {
-      const ahora = new Date().getTime();
-      const diferencia = fechaObjetivo - ahora;
-  
-      if (diferencia <= 0) {
-        clearInterval(intervalo);
-        diasElemento.textContent = '00';
-        horasElemento.textContent = '00';
-        minutosElemento.textContent = '00';
-        segundosElemento.textContent = '00';
-        return;
-      }
-  
-      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-  
-      diasElemento.textContent = formatearTiempo(dias);
-      horasElemento.textContent = formatearTiempo(horas);
-      minutosElemento.textContent = formatearTiempo(minutos);
-      segundosElemento.textContent = formatearTiempo(segundos);
-    }
-  
-    function formatearTiempo(tiempo) {
-      return tiempo < 10 ? `0${tiempo}` : tiempo;
-    }
-  
-    actualizarCuentaRegresiva();
-    const intervalo = setInterval(actualizarCuentaRegresiva, 1000);
-  }
-  
-  // Fecha objetivo: 2 de agosto de 2025
-  const fechaObjetivo = new Date(2025, 7, 2).getTime(); // (año, mes - 1, día)
-  
-  iniciarCuentaRegresiva(fechaObjetivo);
-  
+
   gsap.registerPlugin(ScrollTrigger); // Registra el plugin ScrollTrigger
 
   gsap.utils.toArray(".seccion").forEach(seccion => { // Recorre cada sección
@@ -110,4 +68,48 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
   let audio = document.getElementById("cancion");
   audio.volume = 0.2;
+
+  function iniciarCuentaRegresiva(fechaObjetivo) {
+    const diasElemento = document.querySelector('.dias span');
+    const horasElemento = document.querySelector('.horas span');
+    const minutosElemento = document.querySelector('.minutos span');
+    const segundosElemento = document.querySelector('.segundos span');
+  
+    function actualizarCuentaRegresiva() {
+      const ahora = new Date().getTime();
+      const diferencia = fechaObjetivo - ahora;
+  
+      if (diferencia <= 0) {
+        clearInterval(intervalo);
+        diasElemento.textContent = '00';
+        horasElemento.textContent = '00';
+        minutosElemento.textContent = '00';
+        segundosElemento.textContent = '00';
+        return;
+      }
+  
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+  
+      diasElemento.textContent = formatearTiempo(dias);
+      horasElemento.textContent = formatearTiempo(horas);
+      minutosElemento.textContent = formatearTiempo(minutos);
+      segundosElemento.textContent = formatearTiempo(segundos);
+    }
+  
+    function formatearTiempo(tiempo) {
+      return tiempo < 10 ? `0${tiempo}` : tiempo;
+    }
+  
+    actualizarCuentaRegresiva();
+    const intervalo = setInterval(actualizarCuentaRegresiva, 1000);
+  }
+  
+  // Fecha objetivo: 2 de agosto de 2025
+  const fechaObjetivo = new Date(2025, 7, 2).getTime(); // (año, mes - 1, día)
+  
+  iniciarCuentaRegresiva(fechaObjetivo);
+
 });
